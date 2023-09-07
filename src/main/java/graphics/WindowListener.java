@@ -4,6 +4,7 @@ import javax.swing.*;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
+//window event listener; no features implemented yet
 class WindowListener extends WindowAdapter {
     private final JWindow window;
 
