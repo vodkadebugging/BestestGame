@@ -21,8 +21,19 @@ public class GraphicsAdapter {
     }
 
     private static class Panel extends JPanel {
+        private static final Color
+                BACKGROUND_COLOR = new Color(10, 30, 60),
+                TEXT_COLOR = new Color(200, 170, 180);
+
         Panel() {
-            setBackground(Color.CYAN);
+            setBackground(BACKGROUND_COLOR);
+        }
+
+        @Override
+        protected void paintComponent(Graphics g) {
+            super.paintComponent(g);
+            g.setColor(TEXT_COLOR);
+            g.drawString("message", 200, 200);
         }
     }
 
