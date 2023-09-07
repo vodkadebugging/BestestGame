@@ -1,40 +1,26 @@
 package graphics;
 
-import javax.swing.*;
-import java.awt.*;
+import javax.swing.JWindow;
 
+//
 public class GraphicsAdapter {
-
+    //
     public GraphicsAdapter() {
         new Window();
     }
 
     private static class Window extends JWindow {
-        Window() {
+        private static final int[]
+                WINDOW_LOCATION = {500, 300},
+                WINDOW_SIZE = {700, 600};
+
+        protected Window() {
             super();
-            setLocation(500, 300);
-            setSize(700, 600);
+            setLocation(WINDOW_LOCATION[0], WINDOW_LOCATION[1]);
+            setSize(WINDOW_SIZE[0], WINDOW_SIZE[1]);
             addWindowListener(new WindowListener(this));
-            add(new Panel());
+            add(new GraphicsPanel());
             setVisible(true);
         }
     }
-
-    private static class Panel extends JPanel {
-        private static final Color
-                BACKGROUND_COLOR = new Color(10, 30, 60),
-                TEXT_COLOR = new Color(200, 170, 180);
-
-        Panel() {
-            setBackground(BACKGROUND_COLOR);
-        }
-
-        @Override
-        protected void paintComponent(Graphics g) {
-            super.paintComponent(g);
-            g.setColor(TEXT_COLOR);
-            g.drawString("message", 200, 200);
-        }
-    }
-
 }
