@@ -1,5 +1,7 @@
 package main;
 
+import graphics.GraphicsAdapter;
+
 //
 public class Main {
     //
@@ -13,6 +15,7 @@ public class Main {
     }
 
     private void doSomething() {
+        new GraphicsAdapter();
         System.out.println("message");
     }
 }
