@@ -5,7 +5,7 @@ import java.util.ArrayList;
 
 //
 public class BarySystem extends BaryObject {
-    final List<BaryObject> objects; //TODO: add getters and make this private
+    public final List<BaryObject> objects; //TODO: add getters and make this private
 
     private double mass, radius; //precalculated, updated
 

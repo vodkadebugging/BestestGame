@@ -1,5 +1,8 @@
 package main;
 
+import static console.Utils.printLine;
+import static console.BaryPrinter.printBaryObjectInfo;
+
 import data.Data;
 import graphics.GraphicsAdapter;
 
@@ -7,16 +10,24 @@ import graphics.GraphicsAdapter;
 public class Main {
     //
     public static void main(String[] args) {
+        printArgsInfo(args);
         new Main();
+    }
+
+    private static void printArgsInfo(String[] args) {
+        String argsCountString = "Received args : ";
+        if (args == null) {
+            argsCountString += "null";
+        } else {
+            argsCountString += Integer.toString(args.length);
+        }
+        printLine(argsCountString);
+        printLine();
     }
 
     //
     public Main() {
-        doSomething();
-    }
-
-    private void doSomething() {
+        printBaryObjectInfo(Data.BARY_SYSTEM);
         new GraphicsAdapter();
-        System.out.println("Mass: " + Data.BARY_SYSTEM.getMass() + ", radius: " + Data.BARY_SYSTEM.getRadius());
     }
 }

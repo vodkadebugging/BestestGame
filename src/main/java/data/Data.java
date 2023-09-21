@@ -1,8 +1,6 @@
 package data;
 
-import bary.BaryBody;
-import bary.BaryObject;
-import bary.BarySystem;
+import bary.*;
 
 //
 public class Data {
