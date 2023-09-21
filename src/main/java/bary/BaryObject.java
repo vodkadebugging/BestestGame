@@ -1,12 +1,30 @@
 package bary;
 
+import org.jetbrains.annotations.Nullable;
+
 //
 public abstract class BaryObject {
-    BarySystem parent; //TODO: add getters and setters
+    public @Nullable BarySystem parent; //TODO: add getters
 
     //
-    BaryObject(BarySystem parent) {
+    protected BaryObject(@Nullable BarySystem parent) {
+        setParent(parent);
+    }
+
+    //
+    public void setParent(@Nullable BarySystem parent) {
         this.parent = parent;
+    }
+
+    //workaround
+    public void addToParent() {
+        if (this.parent != null) {
+            try {
+                this.parent.addObject(this);
+            } catch (NullBaryObjectException e) {
+                throw new RuntimeException(e);
+            }
+        }
     }
 
     //

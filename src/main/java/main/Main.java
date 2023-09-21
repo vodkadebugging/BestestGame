@@ -1,22 +1,34 @@
 package main;
 
+import static console.Utils.printLine;
+import static console.BaryPrinter.printBaryObjectInfo;
+
 import data.Data;
+import data.DefaultData;
 import graphics.GraphicsAdapter;
 
 //
 public class Main {
     //
     public static void main(String[] args) {
-        new Main();
+        printArgsInfo(args);
+        new Main(new DefaultData());
+    }
+
+    private static void printArgsInfo(String[] args) {
+        String argsCountString = "Received args : ";
+        if (args == null) {
+            argsCountString += "null";
+        } else {
+            argsCountString += Integer.toString(args.length);
+        }
+        printLine(argsCountString);
+        printLine();
     }
 
     //
-    public Main() {
-        doSomething();
-    }
-
-    private void doSomething() {
+    public Main(Data data) {
+        printBaryObjectInfo(data.getRoot());
         new GraphicsAdapter();
-        System.out.println("Mass: " + Data.BARY_SYSTEM.getMass() + ", radius: " + Data.BARY_SYSTEM.getRadius());
     }
 }
