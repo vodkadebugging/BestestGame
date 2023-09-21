@@ -20,6 +20,7 @@ public class GraphicsAdapter {
 
         protected Window(@NotNull Data data) {
             super();
+            setDefaultCloseOperation(EXIT_ON_CLOSE);
             setLocation(WINDOW_LOCATION[0], WINDOW_LOCATION[1]);
             setSize(WINDOW_SIZE[0], WINDOW_SIZE[1]);
             addWindowListener(new WindowListener(this));
