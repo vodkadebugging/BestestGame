@@ -1,6 +1,6 @@
 package graphics;
 
-import javax.swing.JWindow;
+import javax.swing.JFrame;
 
 //
 public class GraphicsAdapter {
@@ -9,7 +9,7 @@ public class GraphicsAdapter {
         new Window();
     }
 
-    private static class Window extends JWindow {
+    private static class Window extends JFrame {
         private static final int[]
                 WINDOW_LOCATION = {500, 300},
                 WINDOW_SIZE = {700, 600};
