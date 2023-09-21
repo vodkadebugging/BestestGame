@@ -10,6 +10,7 @@ import graphics.GraphicsAdapter;
 //
 public class Main {
     //
+    @SuppressWarnings("InstantiationOfUtilityClass")
     public static void main(String[] args) {
         printArgsInfo(args);
         new Main(new DefaultData());
@@ -29,6 +30,6 @@ public class Main {
     //
     public Main(Data data) {
         printBaryObjectInfo(data.getRoot());
-        new GraphicsAdapter();
+        new GraphicsAdapter(data);
     }
 }
