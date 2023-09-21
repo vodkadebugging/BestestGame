@@ -1,5 +1,6 @@
 package main;
 
+import data.Data;
 import graphics.GraphicsAdapter;
 
 //
@@ -16,6 +17,6 @@ public class Main {
 
     private void doSomething() {
         new GraphicsAdapter();
-        System.out.println("message");
+        System.out.println("Mass: " + Data.BARY_SYSTEM.getMass() + ", radius: " + Data.BARY_SYSTEM.getRadius());
     }
 }
