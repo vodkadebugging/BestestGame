@@ -17,7 +17,7 @@ public abstract class BaryObject {
     }
 
     //workaround
-    public void addToParent() {
+    protected void addToParent() {
         if (this.parent != null) {
             try {
                 this.parent.addObject(this);

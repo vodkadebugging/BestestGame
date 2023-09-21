@@ -4,14 +4,21 @@ import java.awt.Color;
 import java.awt.Graphics;
 import javax.swing.JPanel;
 
+import org.jetbrains.annotations.NotNull;
+
+import data.Data;
+
 //
 class GraphicsPanel extends JPanel {
     private static final Color
             BACKGROUND_COLOR = new Color(10, 30, 60),
             TEXT_COLOR = new Color(200, 170, 180);
 
+    private final Data data;
+
     //
-    protected GraphicsPanel() {
+    protected GraphicsPanel(@NotNull Data data) {
+        this.data = data;
         setBackground(BACKGROUND_COLOR);
     }
 
