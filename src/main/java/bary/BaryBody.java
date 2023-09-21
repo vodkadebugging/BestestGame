@@ -5,8 +5,8 @@ public class BaryBody extends BaryObject {
     private double mass, radius;
 
     //
-    public BaryBody(double mass, double radius) {
-        super();
+    public BaryBody(BarySystem parent, double mass, double radius) {
+        super(parent);
         setMass(mass);
         setRadius(radius);
     }

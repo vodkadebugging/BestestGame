@@ -10,7 +10,8 @@ public class BarySystem extends BaryObject {
     private double mass, radius; //precalculated, updated
 
     //
-    public BarySystem() {
+    public BarySystem(BarySystem parent) {
+        super(parent);
         objects = new ArrayList<>();
     }
 
