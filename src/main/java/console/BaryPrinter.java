@@ -43,8 +43,8 @@ public class BaryPrinter {
         }});
         List<BaryObject> members = system.objects;
         for (BaryObject member : members) {
-            printBaryObjectInfo(member, level + 1);
             printLine(levelPrefix(level + 1));
+            printBaryObjectInfo(member, level + 1);
         }
     }
 
