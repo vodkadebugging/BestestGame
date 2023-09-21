@@ -1,14 +1,18 @@
 package bary;
 
+import org.jetbrains.annotations.Nullable;
+
 //
 public class BaryBody extends BaryObject {
     private double mass, radius;
 
     //
-    public BaryBody(BarySystem parent, double mass, double radius) {
+    public BaryBody(@Nullable BarySystem parent,
+                    double mass, double radius) {
         super(parent);
         setMass(mass);
         setRadius(radius);
+        addToParent();
     }
 
     //

@@ -4,19 +4,20 @@ import bary.*;
 
 //
 public class Data {
-    public static final BaryObject BARY_SYSTEM;
-    private static final BaryObject BARY_BODY_1, BARY_BODY_2, BARY_BODY_3;
+    private BaryObject root;
 
-    static {
-        BARY_SYSTEM = new BarySystem(null);
+    //
+    public Data(BaryObject root) {
+        setRoot(root);
+    }
 
-        BARY_BODY_1 = new BaryBody((BarySystem) BARY_SYSTEM, 0, 0);
-        BARY_BODY_2 = new BaryBody((BarySystem) BARY_SYSTEM, 0, 0);
-        BARY_BODY_3 = new BaryBody((BarySystem) BARY_SYSTEM, 0, 0);
+    //
+    public BaryObject getRoot() {
+        return root;
+    }
 
-        ((BarySystem) BARY_SYSTEM).addObject(BARY_BODY_1);
-        ((BarySystem) BARY_SYSTEM).addObject(BARY_BODY_2);
-        ((BarySystem) BARY_SYSTEM).addObject(BARY_BODY_3);
-        System.out.println("New BarySystem created.");
+    //
+    public void setRoot(BaryObject root) {
+        this.root = root;
     }
 }

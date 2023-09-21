@@ -4,6 +4,7 @@ import static console.Utils.printLine;
 import static console.BaryPrinter.printBaryObjectInfo;
 
 import data.Data;
+import data.DefaultData;
 import graphics.GraphicsAdapter;
 
 //
@@ -11,7 +12,7 @@ public class Main {
     //
     public static void main(String[] args) {
         printArgsInfo(args);
-        new Main();
+        new Main(new DefaultData());
     }
 
     private static void printArgsInfo(String[] args) {
@@ -26,8 +27,8 @@ public class Main {
     }
 
     //
-    public Main() {
-        printBaryObjectInfo(Data.BARY_SYSTEM);
+    public Main(Data data) {
+        printBaryObjectInfo(data.getRoot());
         new GraphicsAdapter();
     }
 }
